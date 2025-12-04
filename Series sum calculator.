@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,sum=0;
+    scanf("%d %d", &a,&b);
+    int c=a;
+    
+    for(int i=1;i<=b;i++){
+        printf("%d", a);
+        if(i!=b){
+            printf(" + ");
+        }
+        sum=sum+a;
+        a=a*10 + c;
+    }
+    
+    printf("\n %d", sum);
+
+    return 0;
+}
+
+input:3  4
+output:3 + 33 + 333 + 3333
+       3702
