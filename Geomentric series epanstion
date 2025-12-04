@@ -1,0 +1,31 @@
+Geometric Series Sum Calculator
+The series he needs to work with is 1 + 1/2 + 1/4 + 1/8 + ...1/N, where each term is obtained by dividing the previous term by 2.
+
+#include <stdio.h>
+
+int main() {
+   int a;
+   float b=1.0,sum=0;
+   scanf("%d", &a);
+   
+   for(int i=1;i<=a;i++)
+   {
+       printf("1.0/%.1f ", b);
+       float num=1.0/b;
+       sum+= num;
+       b=b*2;
+   }
+   printf("\n%.2f ", sum);
+
+    return 0;
+}
+
+Sample Input 1:
+6 (Number of Terms in the series)
+Sample Output 1:
+1.97 (Sum of the Geometric series)
+
+Sample Input 2:
+-1
+Sample Output 2:
+0.00
