@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+   int a,sum=0,flag;
+   scanf("%d", &a);
+   
+   for(int i=a;sum<5;i++)
+   {
+       if(i<2)continue;
+       int flag=0;
+       
+       for(int j=2;j<i;j++){
+       if(i%j==0){
+           flag=1;
+           break;
+       }
+       }
+       
+       if(flag==0){
+           printf("%d ", i);
+           sum++;
+       }
+   }
+
+    return 0;
+}
+
+
+Input:10
+Output:11 13 17 19 23
