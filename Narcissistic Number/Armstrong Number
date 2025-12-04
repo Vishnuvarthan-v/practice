@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a,sum=0,digit,count=0;
+    scanf("%d", &a);
+    int temp=a;
+    int ori=a;
+    
+    while(temp>0){
+        count++;
+        temp/=10;
+    }
+    
+    while(a>0){
+        digit=a%10;
+        int b= (int)pow(digit,count);
+        sum+=b;
+        a/=10;
+    }
+    
+    if(sum==ori){
+        printf("The Number is narcasstic Number.");
+    }
+    else {
+        printf("The Number is not a narcassatic Number.");
+    }
+    return 0;
+}
+
+Sample Input 1:
+153 (Integer)
+Sample Output 1:
+153 is a narcissistic number
+
+Sample Input 2:
+126 (Integer)
+Sample Output 2:
+126 is not a narcissistic number
