@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  int num,temp,ori,last,first,count=0;
+  scanf("%d", &num);
+  temp=num;
+  ori=num;
+  while(temp>0){
+      count++;
+      temp/=10;
+  }
+  
+  last=num%10;
+  first=num/(int)pow(10,count-1);
+  
+  int swap=num-(first*(int)pow(10,count-1));
+  swap+= last*(int)pow(10,count-1);
+  swap-= last;
+  swap+=first;
+  
+  printf("%d ", swap);
+
+    return 0;
+}
+
+INput:1234
+OUtput:4231
