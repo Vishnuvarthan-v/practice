@@ -4,7 +4,7 @@ int main() {
    int a,sum=0,n,digit;
    scanf("%d", &a);
    
-   a=a+1;
+   a=a+1;//11=10+1
    
   while(1){
        n=a;
