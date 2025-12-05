@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+   int a,sum=0,n,digit;
+   scanf("%d", &a);
+   
+   a=a+1;
+   
+  while(1){
+       n=a;
+       sum=0;
+        while(n>0){
+            digit=n%10;
+            sum=sum*10 + digit;
+            n/=10;
+        }
+        
+        if(sum==a){
+            printf("%d ", sum);
+            break;
+        }
+        a++;
+   }
+    return 0;
+}
+
+123 (input)
+Sample Output 1:
+131 (Next Palindrome number greater than input)
+
+Sample Input 2:
+4567
+Sample Output
