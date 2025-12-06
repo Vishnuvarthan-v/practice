@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int a,flag;
+    scanf("%d", &a);
+    
+    for(int i=2;i<=a;i++){
+        flag=0;
+        
+        if(i<2) continue;
+        
+        for(int k=2;k<=i/2;k++){
+        if(i%k==0){
+            flag=1;
+            break;
+        }
+        }
+        
+        
+        if(flag==0){
+            for(int j=1;j<=i;j++){
+                printf("*");
+            }
+        printf("\n");
+        }
+    }
+    return 0;
+}
+
+Sample Input 1:
+6 (Input)
+
+Sample Output 1 :
+* *
+* * *
+* * * * *
