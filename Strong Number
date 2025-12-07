@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+   int a,temp,fact=1,digit,sum=0;
+   scanf("%d", &a);
+   
+   temp=a;
+   while(temp>0){
+       
+       digit=temp%10;
+       fact=1;
+       for(int i=1;i<=digit;i++){
+           fact*=i;
+       }
+       sum+=fact;
+       temp/=10;
+   }
+   
+   if(sum==a){
+       printf("Strong Number");
+   }
+   else{
+       printf("Not a Strong Number.");
+   }
+    return 0;
+}
+
+Sample Input : 1
+1 (Input)
+Sample Output : 1
+1 is a Strong Number.
+Sample Input : 2
+
+4534 (Input)
+Sample Output : 2
+4534 is Not a Strong Number.
