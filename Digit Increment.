@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+   int a,digit,rev=0;
+   int temp;
+   int ori=0;
+   scanf("%d", &a);
+   temp=a;
+   
+   while(temp>0){
+       digit=temp%10;
+       digit=(digit+1)%10;
+       rev=rev*10 + digit;
+       temp/=10;
+   }
+   
+   while(rev>0){
+       digit=rev%10;
+       ori=ori*10 + digit;
+       rev/=10;
+   }
+   
+   printf("%d", ori);
+    return 0;
+}
+
+Sample Input 2:
+9876
+Sample Output 2:
+987
