@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int num, sq, temp, digits = 0;
+    int power = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    sq = num * num;
+    temp = num;
+
+    // Count digits in the number
+    while (temp > 0) {
+        digits++;
+        power *= 10;
+        temp /= 10;
+    }
+
+    // Check automorphic condition
+    if (sq % power == num)
+        printf("%d is an Automorphic number\n", num);
+    else
+        printf("%d is NOT an Automorphic number\n", num);
+
+    return 0;
+}
